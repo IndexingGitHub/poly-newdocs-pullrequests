@@ -23,7 +23,7 @@ jobs:
           python-version: 3.11.1
 
       - name: Install Dependencies
-        run: npm install mkdocs mkdocs-macros-plugin mkdocs-material mkdocs-material-extensions mkdocs-nav-weight pymdown-extensions
+        run: npm install mkdocs
 
       - name: List Dependencies
         run: npm list -g --depth=0
