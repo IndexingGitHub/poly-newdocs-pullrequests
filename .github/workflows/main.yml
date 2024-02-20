@@ -23,7 +23,7 @@ jobs:
           python-version: 3.11.1
 
       - name: Install Dependencies
-        run: pip install mkdocs
+        run: pip install
 
       - name: List Dependencies
         run: pip list
