@@ -23,10 +23,10 @@ jobs:
           python-version: 3.11.1
 
       - name: Install Dependencies
-        run: npm install mkdocs
+        run: pip install mkdocs
 
       - name: List Dependencies
-        run: npm list -g --depth=2
+        run: pip list
 
       - name: Build Documentation
         run: mkdocs build
