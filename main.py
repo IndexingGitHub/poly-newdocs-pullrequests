@@ -247,10 +247,12 @@ def event(name):
 
             parameters[i] = v
 
+        """
         if len(parameters) > 1:
-            #parametersList = f"\n??? quote \"Parameters\"\n{'\n\n'.join(['\t' + item for item in parameters])}"
+            parametersList = f"\n??? quote \"Parameters\"\n{'\n\n'.join(['\t' + item for item in parameters])}"
         elif len(parameters) == 1:
-            #parametersList = f"\n!!! quote \"**Parameters:** <span style=\"font-weight: normal;\">" + parameters[0] + "</span>\""
+            parametersList = f"\n!!! quote \"**Parameters:** <span style=\"font-weight: normal;\">" + parameters[0] + "</span>\""
+        """
 
     return "### :polytoria-Event: %s { #%s data-toc-label=\"%s\" }%s" % (name, name, name, parametersList)
 
@@ -311,11 +313,13 @@ def method(name):
 
             parameters[i] = v
 
+        """
         if len(parameters) > 1:
             ##parametersList = f"\n??? quote \"Parameters\"\n{'\n\n'.join(['\t' + item for item in parameters])}"
             ##parametersList = "parameters are temporarily disabled"
         elif len(parameters) == 1:
             ##parametersList = f"\n!!! quote \"**Parameters:** <span style=\"font-weight: normal;\">" + parameters[0] + "</span>\""
+        """
 
     return "### :polytoria-Method: %s → %s { #%s data-toc-label=\"%s\" }%s" % (name, property_type, name, name, parametersList)
     
