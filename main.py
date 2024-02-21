@@ -209,7 +209,7 @@ def event(name):
     value = name[3:]
     name = value.split(":")[0].strip().split("(")[0].strip()
 
-    parametersList = "parameters are temporarily disabled"
+    parametersList = ""
 
     parameters = ''.join(value.split("("))
     parameters = parameters.split(")")[0].replace(name, '').split(',')
@@ -275,7 +275,7 @@ def method(name):
     if has_link == False:
         property_type = "`" + property_type + "`"
 
-    parametersList = "parameters are temporarily disabled"
+    parametersList = ""
 
     parameters = ''.join(value.split("("))
     parameters = parameters.split(")")[0].replace(name, '').split(',')
