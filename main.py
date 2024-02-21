@@ -249,10 +249,10 @@ def event(name):
 
         if len(parameters) > 1:
             #parametersList = f"\n??? quote \"Parameters\"\n{'\n\n'.join(['\t' + item for item in parameters])}"
-            parametersList = f"\\n??? quote \\\"Parameters\\\"\\n{'\\n\\n'.join(['\\t' + item for item in parameters])}"
+            parametersList = "\n??? quote \"Parameters\"\n%s" % ('\n\n'.join(['\t' + item for item in parameters]))
         elif len(parameters) == 1:
             #parametersList = f"\n!!! quote \"**Parameters:** <span style=\"font-weight: normal;\">" + parameters[0] + "</span>\""
-            parametersList = f"\\n!!! quote \\\"**Parameters:** <span style=\\\"font-weight: normal;\\\">{parameters[0]}</span>\\\""
+            parametersList = "\n!!! quote \"**Parameters:** <span style=\"font-weight: normal;\">%s</span>\"" % (parameters[0])
 
     return "### :polytoria-Event: %s { #%s data-toc-label=\"%s\" }%s" % (name, name, name, parametersList)
 
