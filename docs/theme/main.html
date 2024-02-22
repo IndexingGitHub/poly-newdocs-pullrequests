@@ -19,3 +19,13 @@
 {% block scripts %}
     {{ super() }}
 {% endblock %}
+
+{% block header %}
+    <!-- Custom Banner -->
+    <div class="banner">
+        <p style="display:inline;">This site is not the repository of the new documentation - this is a fork made by one of the contributors to test hosting on Vercel. Site will become out of date.</p>
+    </div>
+
+    <!-- Original Header -->
+    {% include "partials/header.html" %}
+{% endblock %}
